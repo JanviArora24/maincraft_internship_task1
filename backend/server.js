@@ -22,6 +22,32 @@ app.get("/api/products", async (req, res) => {
     res.json(products);
 });
 
+// CREATE
+app.post("/api/products", async (req, res) => {
+    const product = await Product.create(req.body);
+    res.json(product);
+});
+
+// UPDATE
+app.put("/api/products/:id", async (req, res) => {
+    const updatedProduct = await Product.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        { new: true }
+    );
+
+    res.json(updatedProduct);
+});
+
+// DELETE
+app.delete("/api/products/:id", async (req, res) => {
+    await Product.findByIdAndDelete(req.params.id);
+
+    res.json({
+        message: "Product Deleted"
+    });
+});
+
 app.listen(5000, () => {
     console.log("Server running on port 5000");
 });
