@@ -84,3 +84,31 @@ body {
   color: white;
   font-size: 1.2rem;
 }
+
+.form-container {
+  margin-bottom: 30px;
+}
+
+.form-container input {
+  padding: 12px;
+  margin: 10px;
+  width: 220px;
+  border: none;
+  border-radius: 10px;
+}
+
+.add-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.delete-btn {
+  margin-top: 15px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
